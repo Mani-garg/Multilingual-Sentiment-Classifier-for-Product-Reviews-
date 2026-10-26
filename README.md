@@ -15,7 +15,7 @@ This repository demonstrates complete machine learning engineering beyond notebo
 
 ## Table of Contents
 1. [Project Overview & Motivation](#1-project-overview--motivation)
-2. [Target vs Actual Honest Benchmarking](#2-target-vs-actual-honest-benchmarking)
+2. [Benchmark & Evaluation Results](#2-benchmark--evaluation-results)
 3. [System Architecture & Data Flow](#3-system-architecture--data-flow)
 4. [Supported Languages & Dataset Provenance](#4-supported-languages--dataset-provenance)
 5. [Text Cleaning & Conservative Normalization](#5-text-cleaning--conservative-normalization)
@@ -52,9 +52,9 @@ This repository implements a modular, reproducible, production-engineered pipeli
 
 ---
 
-## 2. Target vs Actual Honest Benchmarking
+## 2. Benchmark & Evaluation Results
 
-In compliance with rigorous engineering integrity, we explicitly distinguish between theoretical project benchmark targets and actual measured test metrics. **No benchmark values are fabricated.**
+The table below reports target evaluation goals alongside measured results from the validation suite.
 
 | Metric / Dimension | Target Benchmark Goal | Actual Measured Result (Sample Workflow) | Status / Reference Artifact |
 |---|---|---|---|
