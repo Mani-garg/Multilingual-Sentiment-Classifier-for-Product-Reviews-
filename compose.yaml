@@ -1,0 +1,26 @@
+services:
+  sentiment-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: multilingual-sentiment-api:latest
+    container_name: sentiment_classifier_api
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - LOG_LEVEL=INFO
+      - INFERENCE_BACKEND=onnx
+      - ONNX_EXECUTION_PROVIDER=CPUExecutionProvider
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    volumes:
+      - ./artifacts:/app/artifacts:ro
+      - ./configs:/app/configs:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/live"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

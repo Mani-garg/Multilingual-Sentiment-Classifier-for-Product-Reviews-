@@ -1,0 +1,81 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Large Model weights & checkpoints (do not commit raw weights or large binaries)
+artifacts/transformer/*.h5
+artifacts/transformer/*.weights.h5
+artifacts/transformer/*.safetensors
+artifacts/transformer/saved_model/
+artifacts/onnx/*.onnx
+artifacts/onnx/*.quant.onnx
+artifacts/baseline/*.joblib
+artifacts/*/*.joblib
+*.joblib
+
+# Raw datasets (keep sample data tracked, ignore large raw / interim downloads)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Keep artifact and report folders tracked via .gitkeep
+!artifacts/baseline/.gitkeep
+!artifacts/transformer/.gitkeep
+!artifacts/onnx/.gitkeep
+!artifacts/reports/.gitkeep
+!data/sample/*
+
+# Logs
+*.log
+logs/

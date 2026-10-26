@@ -1,0 +1,59 @@
+{
+  "dataset_train_size_unaugmented": 1006,
+  "dataset_train_size_augmented": 1257,
+  "augmentation_stats": {
+    "augmented_samples_created": 251,
+    "negation_count": 153,
+    "synonym_count": 98,
+    "rejected_count": 595
+  },
+  "unaugmented_metrics": {
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "weighted_f1": 1.0,
+    "per_class": {
+      "negative": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "neutral": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "positive": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "augmented_metrics": {
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "weighted_f1": 1.0,
+    "per_class": {
+      "negative": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "neutral": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "positive": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "comparison": {
+    "macro_f1_delta_percentage_points": 0.0,
+    "accuracy_delta_percentage_points": 0.0,
+    "conclusion": "Augmentation did not improve macro-F1 on held-out test split"
+  }
+}

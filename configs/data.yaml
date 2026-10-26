@@ -1,0 +1,44 @@
+# Data configuration for Multilingual Sentiment Classifier
+dataset:
+  source_id: "amazon_reviews_multi"
+  source_citation: "Keung, P., Lu, Y., Szarvas, G., & Smith, N. A. (2020). The Multilingual Amazon Reviews Corpus. In Proceedings of EMNLP 2020."
+  license: "Custom Amazon Academic / Research License (Open for academic/research evaluation)"
+  version: "1.0.0"
+  supported_languages: ["en", "de", "es", "fr", "ja", "zh"]
+  raw_data_path: "data/raw/multilingual_reviews.jsonl"
+  interim_data_path: "data/interim/cleaned_reviews.jsonl"
+  processed_dir: "data/processed"
+  sample_data_path: "data/sample/multilingual_reviews_sample.jsonl"
+
+schema:
+  required_columns:
+    - "review_id"
+    - "review_text"
+    - "language"
+    - "sentiment_label"
+  optional_columns:
+    - "rating"
+    - "source_dataset"
+    - "source_record_id"
+    - "group_id"
+
+rating_mapping:
+  scale: "1-5"
+  # 1-2 stars -> negative, 3 stars -> neutral, 4-5 stars -> positive
+  negative_ratings: [1, 2]
+  neutral_ratings: [3]
+  positive_ratings: [4, 5]
+
+validation:
+  min_text_length: 2
+  max_text_length: 5000
+  reject_whitespace_only: true
+  drop_duplicates_by: ["review_text", "language"]
+
+splitting:
+  strategy: "stratified_group"
+  group_column: "group_id"
+  train_ratio: 0.80
+  val_ratio: 0.10
+  test_ratio: 0.10
+  random_seed: 42

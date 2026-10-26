@@ -1,0 +1,34 @@
+{
+  "dataset_name": "Multilingual Amazon Reviews Corpus",
+  "citation": "Keung, P., Lu, Y., Szarvas, G., & Smith, N. A. (2020). The Multilingual Amazon Reviews Corpus. In Proceedings of EMNLP 2020.",
+  "license": "Amazon Academic License (Free for academic and research evaluation)",
+  "source_url": "https://huggingface.co/datasets/amazon_reviews_multi",
+  "version": "1.0.0",
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ja",
+    "zh"
+  ],
+  "total_records": 1500,
+  "clean_records": 1258,
+  "duplicate_records_removed": 242,
+  "label_mapping": {
+    "1_star": "negative",
+    "2_star": "negative",
+    "3_star": "neutral",
+    "4_star": "positive",
+    "5_star": "positive"
+  },
+  "missing_value_policy": "Drop rows where review_text or sentiment_label is missing/empty",
+  "duplicate_policy": "Deduplicate on exact (review_text, language) match, retaining first occurrence",
+  "known_biases": [
+    "Product domain vocabulary skew towards electronics and household consumer goods",
+    "Higher proportion of 5-star positive reviews compared to neutral 3-star reviews",
+    "Cultural differences in review length and phrasing across languages (e.g. Japanese reviews tend to be more polite and concise)"
+  ],
+  "checksum_sha256": "b211c81bd9374e4ce56bf97d44efc6c308d662a25666a3d389bdbd4611ef4dfa",
+  "timestamp": "2026-10-26T04:50:56.102597+00:00"
+}

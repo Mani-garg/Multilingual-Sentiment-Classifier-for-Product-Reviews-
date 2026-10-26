@@ -1,0 +1,116 @@
+{
+  "label_to_id": {
+    "negative": 0,
+    "neutral": 1,
+    "positive": 2
+  },
+  "id_to_label": {
+    "0": "negative",
+    "1": "neutral",
+    "2": "positive"
+  },
+  "config": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 25000,
+    "min_df": 2,
+    "c_regularization": 1.0,
+    "class_weight": "balanced",
+    "random_seed": 42
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "weighted_f1": 1.0,
+    "per_class": {
+      "negative": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "neutral": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "positive": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        58,
+        0,
+        0
+      ],
+      [
+        0,
+        19,
+        0
+      ],
+      [
+        0,
+        0,
+        49
+      ]
+    ],
+    "labels_order": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "per_language": {
+      "de": {
+        "sample_count": 22,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "error_count": 0,
+        "error_percentage_of_total": 0.0
+      },
+      "en": {
+        "sample_count": 27,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "error_count": 0,
+        "error_percentage_of_total": 0.0
+      },
+      "es": {
+        "sample_count": 22,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "error_count": 0,
+        "error_percentage_of_total": 0.0
+      },
+      "fr": {
+        "sample_count": 21,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "error_count": 0,
+        "error_percentage_of_total": 0.0
+      },
+      "ja": {
+        "sample_count": 17,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "error_count": 0,
+        "error_percentage_of_total": 0.0
+      },
+      "zh": {
+        "sample_count": 17,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "error_count": 0,
+        "error_percentage_of_total": 0.0
+      }
+    },
+    "training_duration_seconds": 0.16459300000133226,
+    "avg_inference_latency_ms": 0.005673015876377504,
+    "vocab_size": 919
+  }
+}

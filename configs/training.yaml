@@ -1,0 +1,41 @@
+# Training hyperparameters and pipeline settings
+training:
+  random_seed: 42
+  batch_size: 32
+  eval_batch_size: 64
+  epochs: 3
+  learning_rate: 3.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  gradient_clip_norm: 1.0
+  mixed_precision: false
+  early_stopping_patience: 2
+  early_stopping_metric: "val_macro_f1"
+  early_stopping_mode: "max"
+  use_class_weights: true
+  dynamic_padding: true
+  output_dir: "artifacts/transformer"
+  checkpoint_frequency: "epoch"
+
+baseline:
+  model_type: "tfidf_logistic_regression"
+  ngram_range: [1, 2]
+  max_features: 25000
+  min_df: 2
+  sublinear_tf: true
+  c_regularization: 1.0
+  class_weight: "balanced"
+  max_iter: 1000
+  solver: "lbfgs"
+  random_seed: 42
+  artifact_dir: "artifacts/baseline"
+
+augmentation:
+  enabled: true
+  train_only: true
+  methods:
+    - "negation_preserving_paraphrase"
+    - "contextual_synonym_substitution"
+  max_augmented_ratio: 0.25
+  label_preservation_threshold: 0.85
+  random_seed: 42

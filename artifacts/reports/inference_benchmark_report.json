@@ -1,0 +1,46 @@
+{
+  "hardware_and_environment": {
+    "os": "Windows",
+    "os_release": "10",
+    "cpu_architecture": "AMD64",
+    "cpu_count_physical": 2,
+    "cpu_count_logical": 4,
+    "ram_total_gb": 7.88,
+    "python_version": "3.11.17"
+  },
+  "benchmark_config": {
+    "backend": "baseline",
+    "cold_start_ms": 26.2,
+    "iterations_per_batch": 20,
+    "memory_rss_mb": 190.31
+  },
+  "batch_benchmarks": [
+    {
+      "batch_size": 1,
+      "mean_latency_ms": 3.13,
+      "median_p50_ms": 2.97,
+      "p95_ms": 4.46,
+      "p99_ms": 4.84,
+      "latency_per_sample_ms": 3.128,
+      "throughput_samples_per_sec": 319.7
+    },
+    {
+      "batch_size": 8,
+      "mean_latency_ms": 3.56,
+      "median_p50_ms": 3.53,
+      "p95_ms": 4.23,
+      "p99_ms": 4.39,
+      "latency_per_sample_ms": 0.444,
+      "throughput_samples_per_sec": 2250.1
+    },
+    {
+      "batch_size": 32,
+      "mean_latency_ms": 5.61,
+      "median_p50_ms": 5.72,
+      "p95_ms": 6.31,
+      "p99_ms": 6.38,
+      "latency_per_sample_ms": 0.175,
+      "throughput_samples_per_sec": 5704.3
+    }
+  ]
+}

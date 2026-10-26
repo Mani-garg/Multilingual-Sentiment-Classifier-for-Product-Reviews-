@@ -1,0 +1,33 @@
+# FastAPI Serving and Inference Runtime Configuration
+serving:
+  host: "0.0.0.0"
+  port: 8000
+  title: "Multilingual Sentiment Classifier API"
+  version: "1.0.0"
+  description: "Production REST API for high-performance multilingual sentiment classification."
+  backend: "onnx"  # 'onnx', 'quantized_onnx', or 'transformer_reference'
+  artifacts_dir: "artifacts/onnx"
+  baseline_artifacts_dir: "artifacts/baseline"
+  transformer_artifacts_dir: "artifacts/transformer"
+
+runtime:
+  execution_provider: "CPUExecutionProvider"
+  inter_op_num_threads: 2
+  intra_op_num_threads: 4
+  enable_profiling: false
+
+limits:
+  max_request_text_length: 5000
+  max_texts_per_request: 64
+  max_concurrent_requests: 10
+  request_timeout_seconds: 10.0
+
+batching:
+  enabled: true
+  max_batch_size: 32
+  max_wait_ms: 20
+
+security:
+  api_key_enabled: false
+  api_key_header: "X-API-Key"
+  cors_origins: ["*"]

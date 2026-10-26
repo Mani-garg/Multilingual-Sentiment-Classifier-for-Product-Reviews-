@@ -1,0 +1,27 @@
+# Evaluation and Error Analysis Configuration
+evaluation:
+  batch_size: 64
+  primary_metric: "macro_f1"
+  metrics:
+    - "accuracy"
+    - "macro_f1"
+    - "macro_precision"
+    - "macro_recall"
+    - "weighted_f1"
+    - "per_class_f1"
+    - "per_class_precision"
+    - "per_class_recall"
+  min_samples_per_language: 10
+  reports_dir: "artifacts/reports"
+
+error_analysis:
+  max_error_samples_per_slice: 50
+  categories:
+    - "negation_error"
+    - "sarcasm_or_irony"
+    - "mixed_sentiment"
+    - "ambiguous_neutral"
+    - "short_context_poor"
+    - "code_switching_mixed_language"
+    - "domain_product_terminology"
+    - "underrepresented_class"

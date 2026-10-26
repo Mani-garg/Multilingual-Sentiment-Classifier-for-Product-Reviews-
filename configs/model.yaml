@@ -1,0 +1,40 @@
+# Model configuration
+model:
+  name: "multilingual_sentiment_classifier"
+  # distilbert-base-multilingual-cased supports 104 languages, including en, de, es, fr, ja, zh
+  checkpoint: "distilbert-base-multilingual-cased"
+  revision: "main"
+  architecture: "DistilBertForSequenceClassification"
+  max_sequence_length: 128
+  num_labels: 3
+  labels:
+    - "negative"
+    - "neutral"
+    - "positive"
+  label2id:
+    negative: 0
+    neutral: 1
+    positive: 2
+  id2label:
+    0: "negative"
+    1: "neutral"
+    2: "positive"
+
+tokenizer:
+  use_fast: true
+  do_lower_case: false  # Cased checkpoint preserves case sensitivity and accents
+  strip_accents: false
+
+export:
+  onnx_filename: "model.onnx"
+  quantized_filename: "model.quant.onnx"
+  opset_version: 17
+  dynamic_axes:
+    input_ids:
+      0: "batch_size"
+      1: "sequence_length"
+    attention_mask:
+      0: "batch_size"
+      1: "sequence_length"
+    logits:
+      0: "batch_size"

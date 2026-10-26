@@ -1,0 +1,9 @@
+{
+  "source_fp32_model": "model.onnx",
+  "quantized_target": "model.quant.onnx",
+  "weight_type": "QInt8",
+  "per_channel": false,
+  "source_size_bytes": 659,
+  "quantized_size_bytes": 1395,
+  "size_reduction_pct": -111.68437025796662
+}
